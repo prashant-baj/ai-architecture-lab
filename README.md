@@ -241,6 +241,15 @@ Architecture Lab (Local) ↔ MCP Servers ↔ Enterprise Tools
 
 These integrations transform Architecture as Code from a development practice into an enterprise capability, enabling seamless collaboration between architects, developers, and business stakeholders.
 
+## 🗂️ Inputs/Outputs Extraction Pattern
+
+To support an efficient AI processing pipeline, use this content conversion workflow:
+
+- `inputs/raw/`: store original documents (pdf, docx, pptx, png, etc.)
+- `outputs/extracted/`: store extracted markdown output from ingestion pipelines
+- All architecture/synthesis workflows should operate on `outputs/extracted/*.md` to maximize processing speed and session repeatability.
+- Re-extract only when source documents change; keep source files immutable for auditing.
+
 ## 🤝 Contributing
 
 This is a learning resource. Feel free to:
