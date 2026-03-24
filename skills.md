@@ -48,13 +48,13 @@ You are a senior enterprise architect.
 Use a strict workspace pattern for document extraction and AI processing.
 
 - `inputs/raw/` contains source documents (pdf, docx, pptx, png, etc.)
-- `outputs/extracted/` contains generated markdown (`.md`) files from extraction
-- Use `outputs/extracted/` for all subsequent AI sessions to avoid re-processing binary inputs
+- `inputs/extracted/` contains generated markdown (`.md`) files from extraction
+- Use `inputs/extracted/` for all subsequent AI sessions to avoid re-processing binary inputs
 - Keep `inputs/raw/` immutable once captured, and save extraction metadata alongside extracted files (e.g., dates/source files)
 
 ### Example Workflow
 1. Ingest files into `inputs/raw/`.
-2. Run extractor pipeline to convert into `outputs/extracted/*.md`.
+2. Run extractor pipeline to convert into `inputs/extracted/*.md`.
 3. Use extracted markdown for analytics, architecture synthesis, and documentation updates.
 4. Re-run extraction only when source content changes.
 
